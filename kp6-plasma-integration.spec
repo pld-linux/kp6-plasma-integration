@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.0.5
+%define		kdeplasmaver	6.1.0
 %define		qtver		5.15.2
 %define		kpname		plasma-integration
 
 Summary:	KDE Plasma Integration
 Name:		kp6-%{kpname}
-Version:	6.0.5
+Version:	6.1.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	0af72c4d39d434137a5f36eb8a67efe3
+# Source0-md5:	88672e5fa8418d99c64953df0482749f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
@@ -44,6 +44,7 @@ BuildRequires:	xorg-driver-input-evdev-devel
 BuildRequires:	xorg-driver-input-synaptics-devel
 BuildRequires:	xorg-lib-libXft-devel
 BuildRequires:	xz
+Obsoletes:	kp5-%{kpname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -56,6 +57,7 @@ Summary:	Header files for %{kpname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kpname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	kp5-%{kpname}-devel < %{version}
 
 %description devel
 Header files for %{kpname} development.
