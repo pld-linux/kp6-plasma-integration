@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.3.5
+%define		kdeplasmaver	6.4.0
 %define		qtver		5.15.2
 %define		kpname		plasma-integration
 
 Summary:	KDE Plasma Integration
 Name:		kp6-%{kpname}
-Version:	6.3.5
+Version:	6.4.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	63a6892038c34f8827f4c16328cb6b94
+# Source0-md5:	bb40df9a943771cf9e1368cb57c9441b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
