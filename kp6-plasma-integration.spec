@@ -51,7 +51,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		qt6dir		%{_libdir}/qt6
 
 %description
-KDE Plasma Integration.
+Qt Platform Theme integration plugins for Plasma Workspaces.
+
+%description -l pl.UTF-8
+Integracja tematów Qt dla obszarów roboczych Plazmy.
 
 %package devel
 Summary:	Header files for %{kpname} development
